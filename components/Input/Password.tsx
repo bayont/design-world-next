@@ -13,6 +13,7 @@ export const Password = ({ placeholder, setInputValue }: Props) => {
             className="w-full border border-neutral-90 rounded-lg p-4 font-medium text-base text-neutral-60 bg-inherit;"
             type={pwCovered ? 'password' : 'text'}
             placeholder={placeholder}
+            name="user-password"
             onInput={(e) =>
                setInputValue &&
                setInputValue((e.target as HTMLInputElement).value)

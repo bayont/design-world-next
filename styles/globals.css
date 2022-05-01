@@ -11,7 +11,18 @@ body {
 input {
    @apply block bg-inherit;
 }
-
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+   transition: background-color 600000s 0s, color 600000s 0s;
+   font-size: inherit;
+}
+input[data-autocompleted] {
+   background-color: transparent !important;
+   font-size: inherit;
+}
 a {
    @apply font-semibold text-primary-main hover:text-primary-hover;
+}
+.error a {
+   @apply text-red-500 hover:text-red-700;
 }
