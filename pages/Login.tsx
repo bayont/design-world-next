@@ -14,7 +14,6 @@ const Login: NextPage = () => {
             password: (inputs.namedItem('user-password') as HTMLInputElement)
                .value,
          });
-         console.log(signed);
       },
       [],
    );

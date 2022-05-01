@@ -1,6 +1,9 @@
 import type { NextPage } from 'next';
 import { useSession } from 'next-auth/react';
-import Link from 'next/link';
+import { Authorization } from '../components/Authorization';
+import { AuthButton } from '../components/Button/AuthButton';
+import { GoogleButton } from '../components/Button/GoogleButton';
+import { SignOut } from '../components/Button/SignOut';
 
 const Home: NextPage = () => {
    const { data: session } = useSession();
@@ -8,19 +11,10 @@ const Home: NextPage = () => {
       <>
          {session ? (
             <>
-               <Link href="/signout">
-                  <button>Sign out</button>
-               </Link>
+               <SignOut />
             </>
          ) : (
-            <>
-               <Link href="/login">
-                  <button>Login</button>
-               </Link>
-               <Link href="/register">
-                  <button>Register</button>
-               </Link>
-            </>
+            <Authorization />
          )}
       </>
    );

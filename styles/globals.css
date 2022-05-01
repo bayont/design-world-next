@@ -4,9 +4,13 @@
 
 body {
    @apply bg-neutral-99 p-0 m-0 antialiased font-body text-neutral-10;
-   background-image: url('../public/bg-photo.png');
-   background-repeat: no-repeat;
-   background-position: 100% 0%;
+}
+@media screen and (min-width: 1000px) {
+   body {
+      background-image: url('../public/bg-photo.png');
+      background-repeat: no-repeat;
+      background-position: 100% 0%;
+   }
 }
 input {
    @apply block bg-inherit;

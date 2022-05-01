@@ -1,6 +1,6 @@
 export const Footer = () => {
    return (
-      <footer className="m-32">
+      <footer className="mt-32 ml-32 text-neutral-70">
          <p>Fabian Fetter &copy; 2022</p>
          <p>
             UI designed by{' '}
